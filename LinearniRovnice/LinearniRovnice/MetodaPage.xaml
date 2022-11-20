@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LinearniRovnice.MetodaPage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <StackLayout Margin="20" Spacing="10">
+                <Label Text="Zvolte metodu výpočtu:"/>
+                <RadioButton x:Name="r1" Content="Gaussova eliminace" IsChecked="True" CheckedChanged="r1_CheckedChanged"/>
+                <RadioButton x:Name="r2" Content="Jordanova eliminace" CheckedChanged="r1_CheckedChanged"/>
+                <RadioButton x:Name="r3" Content="Jacobiho metoda" CheckedChanged="r3_CheckedChanged"/>
+                <RadioButton x:Name="r4" Content="Gauss-Siedelova metoda" CheckedChanged="r3_CheckedChanged"/>
+                <StackLayout x:Name="sPresnost" Orientation="Horizontal" IsVisible="False">
+                    <Label Text="Zadejte požadovanou přesnost"/>
+                    <Entry x:Name="ePresnost"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Zpět" x:Name="bZpet" HorizontalOptions="StartAndExpand" Clicked="bZpet_Clicked"/>
+                    <Button Text="Dále" x:Name="bDale" HorizontalOptions="EndAndExpand" Clicked="bDale_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

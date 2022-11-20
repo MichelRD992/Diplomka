@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LinearniRovnice.MaticePage"
+             Title="Matice soustavy">
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <StackLayout Margin="20" Spacing="10">
+                <Label Text="Vyplňte matici soustavy:"/>
+                <StackLayout>
+                    <Grid x:Name="gMatice"/>
+                </StackLayout>
+                <StackLayout x:Name="sTest"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Zpět" x:Name="bZpet" HorizontalOptions="StartAndExpand" Clicked="bZpet_Clicked"/>
+                    <Button Text="Dále" x:Name="bDale" HorizontalOptions="EndAndExpand" Clicked="bDale_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
